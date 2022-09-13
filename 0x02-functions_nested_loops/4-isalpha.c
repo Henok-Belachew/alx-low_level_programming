@@ -1,4 +1,4 @@
-#include "holberton.h"
+
 /**
 * _isalpha - Shows 1 if the input is c
 * letter Another cases, shows 0
