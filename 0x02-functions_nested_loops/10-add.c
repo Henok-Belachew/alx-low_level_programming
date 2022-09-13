@@ -1,14 +1,23 @@
-
+#include "main.h"
+#include <stdio.h>
 
 /**
   * add - Adds two values
-  * @s1: The first number to be computed
-  * @s2: The second number to be computed
+  * @n1: The first number to be computed
+  * @n2: The second number to be computed
   *
   * Return: Integer value
   */
-int add(int s1, int s2)
+int add(int n1, int n2)
 {
-	return (s1 + s2);
+	return (n1 + n2);
 }
 
+int main(void)
+{
+    int n;
+
+    n = add(89, 9);
+    printf("%d\n", n);
+    return (0);
+}
