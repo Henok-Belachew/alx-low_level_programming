@@ -1,4 +1,4 @@
-#include "holberton.h"
+
 
 /**
   * _strcpy - Copy a string

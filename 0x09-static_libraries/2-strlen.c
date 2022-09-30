@@ -1,4 +1,3 @@
-#include "holberton.h"
 
 /**
  * _strlen - returns the length of a string
