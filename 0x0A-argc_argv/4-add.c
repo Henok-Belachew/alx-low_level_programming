@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * isInteger - checks if the argument is integer or not
+ * isNotInteger - checks if the argument is integer or not
  * @s: array of character
  * Return: 0 || 1
  */
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 {
 	int sum = 0;
 
-	while (--argc >= 0)
+	while (--argc)
 
 	{
 		if (isNotInteger(argv[argc]))
