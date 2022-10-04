@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *snt;
-	unsigned int j;
+
 
 	snt = malloc(sizeof(char) * (strlen(str) + 1));
 
