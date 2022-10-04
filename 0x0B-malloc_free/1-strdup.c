@@ -18,10 +18,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (; j < strlen(str); j++)
-	{
-		snt[j] = str[j];
-	}
+	strcpy(snt,str);
 
 	return (snt);
 }
