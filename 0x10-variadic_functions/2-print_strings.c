@@ -10,12 +10,21 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	count i = 0;
 	va_list theList;
+	char *theString;
 
 	va_start(theList, n);
 
 	for (; i < n; i++)
 	{
-		printf("%s", va_arg(theList, char *));
+		theString = va_arg(theList, char *);
+		if (!theString)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", theString);
+		}
 
 		if (separator)
 		{
