@@ -2,7 +2,11 @@
 #include <string.h>
 
 
-
+/**
+ * sep - separates the arguments with ", "
+ * @j: is the index of the format indentifier
+ * @size: length of the passwed format specifier string
+ */
 void sep(int j, int size)
 {
 	if (j < (size - 1))
@@ -17,15 +21,11 @@ void sep(int j, int size)
  */
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i = 0, arg2, len = strlen(format);
 	va_list args;
-	char arg1;
-	int arg2;
+	char arg1, *arg4;
 	float arg3;
-	char *arg4;
-	int len = strlen(format);
 
-	i = 0;
 	va_start(args, format);
 	while (format[i])
 	{
@@ -48,9 +48,9 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			arg4 = va_arg(args, char *);
-			if (!arg4)
+			if (arg4 == NULL)
 			{
-				printf("(nil)");
+				printf("%s", "(nil)");
 				sep(i, len);
 				break;
 			}
