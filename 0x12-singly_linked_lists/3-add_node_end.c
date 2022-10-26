@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	elem = (list_t *)malloc(sizeof(list_t));
 	data = strdup(str);
 
-	if (!elem && !data)
+	if (!elem)
 	{
 		free(elem);
 		return (NULL);
@@ -25,7 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	elem->next = NULL;
 
 	/* let's handle adding the first element case*/
-	if (!*head)
+	if (!(*head))
 	{
 		*head = elem;
 		return (elem);
