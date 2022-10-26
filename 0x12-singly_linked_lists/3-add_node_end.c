@@ -16,13 +16,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	elem = (list_t *)malloc(sizeof(list_t));
 	if (elem == NULL)
 	{
-		free(elem);
 		return (NULL);
 	}
 
 	if (str == NULL)
 	{
-		free(elem);
 		return (NULL);
 	}
 
