@@ -12,14 +12,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	char *data;
 	list_t *p;
 
+	data = strdup (str);
 	elem = (list_t *)malloc(sizeof(list_t));
-	data = strdup(str);
-
 	if (!elem)
 	{
 		free(elem);
 		return (NULL);
 	}
+
 	elem->str = data;
 	elem->len = strlen(data);
 	elem->next = NULL;
