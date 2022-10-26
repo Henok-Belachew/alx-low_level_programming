@@ -12,11 +12,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	char *data;
 	list_t *p;
 
-	data = strdup (str);
+	data = strdup(str);
 	elem = (list_t *)malloc(sizeof(list_t));
 	if (!elem)
 	{
-		free(elem);
 		return (NULL);
 	}
 
