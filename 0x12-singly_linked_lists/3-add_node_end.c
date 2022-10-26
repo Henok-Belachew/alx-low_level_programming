@@ -9,10 +9,9 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *elem;
-	char *data;
 	list_t *p;
 
-	data = strdup(str);
+
 	elem = (list_t *)malloc(sizeof(list_t));
 	if (elem == NULL)
 	{
@@ -24,8 +23,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	elem->str = data;
-	elem->len = strlen(data);
+	elem->str = strdup(str);
+	elem->len = strlen(str);
 	elem->next = NULL;
 
 	/* let's handle adding the first element case*/
