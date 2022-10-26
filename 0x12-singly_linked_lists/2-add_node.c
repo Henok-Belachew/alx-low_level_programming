@@ -18,14 +18,21 @@ list_t *add_node(list_t **head, const char *str)
 	/*Handling the malloc functin return*/
 	if (!elem)
 	{
+		free(elem);
 		return (NULL);
 	}
 	/*copyinng passed string to a new string variable */
 	data = strdup(str);
+	if (!data)
+	{
+		free(elem);
+		return (NULL);
+	}
+
 
 	elem->next = *head;
 	elem->str = data;
-	elem->len = strlen(data);	
+	elem->len = strlen(data);
 	/*making the new element a head for list */
 	*head = elem;
 	return (elem);
