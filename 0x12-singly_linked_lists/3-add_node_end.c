@@ -19,6 +19,12 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
+	if (str == NULL)
+	{
+		free(elem);
+		return (NULL);
+	}
+
 	elem->str = data;
 	elem->len = strlen(data);
 	elem->next = NULL;
@@ -27,16 +33,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!(*head))
 	{
 		*head = elem;
-		return (elem);
 	}
-
-	/*Getting the last element of the linked list*/
-	p = *head;
-	while (p->next)
+	else
 	{
-		p = (*head)->next;
+		/*Getting the last element of the linked list*/
+		p = *head;
+		while (p->next)
+		{
+			p = (*head)->next;
+		}
+		p->next = elem;
 	}
-	p->next = elem;
 
 	return (elem);
 }
